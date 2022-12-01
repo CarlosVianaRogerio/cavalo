@@ -96,7 +96,7 @@
     function registrar(){
         ax_1 = iptQtdCavalos.value;
 
-        if((ax_1 == 0 || ax_1 < 0 || ax_1.legth <= 0 || ax_1 > 7||ax_1 < 3 || Number.isNaN(ax_1))){
+        if((ax_1 == 0 || ax_1 < 0 || ax_1.legth <= 0 || ax_1 < 3 || ax_1 > 7|| Number.isNaN(ax_1))){
             alert('Ih deu ruim')
         }else{
         
@@ -110,19 +110,20 @@
     var vtNomeCavalos=[]
     var contador = 0;
     function registrarr(){
-        
+        var contErro = 0;
         let nome = iptNomeCavalos.value;
         console.log(vtNomeCavalos)
         console.log(ax_1)
         for (let index = 0; index < vtNomeCavalos.length; index++) {
             if(nome == vtNomeCavalos[index]){
-                ('nome repetido')
+               contErro ++;
             }
-            
-        else if(nome == 0 || nome < 0 ||nome.lenght <= 0 || vtNomeCavalos.length >= ax_1){
+        }
+         if(nome == 0 || nome < 0 ||nome.lenght <= 0 || vtNomeCavalos.length >= ax_1 || contErro > 0){
             alert('Ih deu ruim')}
 
         else {
+            console.log(`entrou aqui`)
             contador++
         if(contador == 1){
             var display = document.getElementById('cavalo1').style.display ='flex'
@@ -165,9 +166,9 @@
             contador = 999
         }
         
-        iptNomeCavalos.value = ``
+        iptNomeCavalos.value = ``;
     }
-}
+
 }
     function proximo(){
         
@@ -190,15 +191,16 @@
             alert(`opa, deu ruim`)
         }   else {
             ttVolta = iptQtdVoltas.value;
-            
-        }
-        console.log(vtQtdVoltas)
-       
-        
+
         var display = document.getElementById('form3').style.display ='none'
         var display = document.getElementById('form33').style.display ='flex'
         var display = document.getElementById('form4').style.display ='flex'
 
+        }
+        console.log(vtQtdVoltas)
+       
+        
+       
     }
     voltasCont = 0;
 
