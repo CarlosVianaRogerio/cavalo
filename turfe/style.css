@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: inherit;
+}
+.inicio .container{
+    border: solid 2px black;
+    width: 100vw;
+    height: 100vh;
+    
+    background-image: url(assets/fundo\ inicio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.corrida .container{
+    border: solid 2px black;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/fundo\ inicio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+/* .borrar{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10);
+} */
+.containerForm{
+    border: solid 2px black;
+    width: 40vw;
+    height: 55vh;
+    background-color: #2d572c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 2%;
+}
+.containerForm3{
+    border: solid 2px black;
+    width: 40vw;
+    height: 45vh;
+    background-color: #2d572c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    border-radius: 2%;
+    margin-right: 3%;
+    margin-left: 3%;
+
+    
+}
+.titulo{
+    margin-top: 5%;
+    width: 40vw;
+    justify-content: center;
+    display: flex;
+}
+.escritaInput{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.escritaDiv{
+   
+}
+
+
+h1{
+    font-family: 'roboto',sans-serif;
+    font-weight: 900;
+}
+.escrita{
+    font-family: 'roboto',sans-serif;
+    font-size: 25px ;
+    font-weight: 700;
+}
+input{
+    border: 3px #10270f solid;
+    border-radius: 2%;
+    width: 12vw;
+    height: 7vh;
+    text-align: center;
+}
+.botao{
+    border: 3px #10270f solid;
+    background-color:#284527 ;
+    border-radius: 4%;
+    width: 10vw;
+    height: 8vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content:center;
+    align-items: center; 
+    cursor: pointer;
+}
+.containerImgs{
+    width: 35vw;
+    height: 98vh;
+    margin-left: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nomeCavalos{
+    display: flex;
+    width: 15vw;
+    height: 14vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #284527;
+}
+.containerCavalo1{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo1{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo2{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.cavalo2{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo3{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo3{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo4{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo4{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo5{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo5{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo6{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo6{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.containerCavalo7{
+    border: solid 1px black;
+    width: 35vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between;
+}
+.cavalo7{
+    width: 20vw;
+    height: 14vh;
+    background-image: url(assets/cavalo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ur{
+    margin:5%;
+    border: solid 2px black;
+    width: 50vw;
+    height: 90vh;
+    background-color: rgb(255,255, 0, 0.8);
+
+}
+.resposta{
+    font-family: 'roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.vencedor .container{
+    border: solid 2px black;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/fundo\ inicio.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.podio{
+    border: solid 2px black;
+    width: 60vw;
+    height: 70vh;
+    background-color: #284527;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+.segundo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 40vh;
+    background-color: silver;
+}
+.primeiro{
+
+display: flex;
+justify-content: center;
+align-items: center;    width: 20vw;
+    height: 65vh;
+    background-color: gold;
+}
+.terceiro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 25vh;
+    background-color: brown;
+}

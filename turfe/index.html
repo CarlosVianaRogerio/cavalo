@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="inicio" id='inicio' style="display: flex;">
+        
+        <div class="container">
+            
+            <div class="containerForm" id="form1" style="display: flex;">
+                <div class="titulo"><h1>Bem vindo ao Turfe</h1></div>
+                    <div class="escritaInput"><div class="escritaDiv"><span class="escrita">Quantos cavalos terá na corrida?</span><br><br></div>
+                        <input id="iptQtdCavalos" placeholder="Max: 7">
+                <div class="botao" onclick="registrar()"><span class="escrita">Registrar</span></div>
+                    </div>
+            </div>
+
+            <div class="containerForm" id="form2" style="display: none;">
+                
+                    <div class="escritaInput"><div class="escritaDiv"><span class="escrita" id="escrita">Qual o nome dos cavalos?</span><br><br></div>
+                        <input id="iptNomeCavalos" placeholder="Max: 7">
+                <div class="botao" onclick="registrarr()"><span class="escrita">Registrar</span></div>
+                <div class="botao" onclick="proximo()"><span class="escrita">Avançar</span></div>
+                    </div>
+            </div>
+                <div class="containerImgs" id='cavalos' style="display: none;">
+                    <div class="containerCavalo1" id="cavalo1" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome1"></span></div><div class="cavalo1"></div></div>
+                    <div class="containerCavalo2" id="cavalo2" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome2"></span></div><div class="cavalo2"></div></div>
+                    <div class="containerCavalo3" id="cavalo3" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome3"></span></div><div class="cavalo3"></div></div>
+                    <div class="containerCavalo4" id="cavalo4" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome4"></span></div><div class="cavalo4"></div></div>
+                    <div class="containerCavalo5" id="cavalo5" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome5"></span></div><div class="cavalo5"></div></div>
+                    <div class="containerCavalo6" id="cavalo6" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome6"></span></div><div class="cavalo6"></div></div>
+                    <div class="containerCavalo7" id="cavalo7" style="display : none;"><div class="nomeCavalos"><span class="escrita" id="nome7"></span></div><div class="cavalo7"></div></div>
+                </div>
+    
+                
+            </section>
+
+            <section class="corrida" id='corrida' style="display: flex;">
+                <div class="container">
+
+            <div class="containerForm3" id="form3" style="display: none;">
+                    <div class="escritaInput"><div class="escritaDiv"><span class="escrita" id="escrita">Quantas voltas terão a corrida?</span><br><br></div>
+                        <input id="iptQtdVoltas" placeholder="Max: 12">
+                <div class="botao" onclick="voltas()"><span class="escrita">Registrar</span></div>
+                    </div>
+            </div>
+            <div class="ur" id="form33" style="display: none;">
+            <span class = 'resposta' id="mostrar"></span ></div>
+
+
+
+            <div class="containerForm3" id="form4" style="display: none;">
+                <div class="titulo"><h1>Hora de correr!!!</h1></div>
+                    <div class="escritaInput"><div class="escritaDiv"><span class="escrita" id="escrita">Iniciar corrida</span><br><br></div>
+                <div class="botao" onclick="iniciar()"><span class="escrita" id="voltaContador">Iniciar</span></div>
+                
+                    </div>
+            </div>
+        </div>
+    </section> 
+        <section class="vencedor" id ='vencedor' style="display: none;">
+            <div class="container">
+                <div class="podio">
+                    <div class="segundo"><span class="resposta" id="divSegundo">urru</span></div>
+                    <div class="primeiro"><span class="resposta"id="divPrimeiro">22</span></div>
+                    <div class="terceiro"><span class="resposta"id="divTerceiro">333</span></div>
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    
+    
+</body>
+<script>
+
+    
+    var vtNomeCavalos = [];
+    var qtdVoltas = 0;
+    var ax_1 = 0;
+    var t1 = 0;
+    var t2 = 0;
+    var t3 = 0;
+    var t4 = 0;
+    var t5 = 0;
+    var t6 = 0;
+    var t7 = 0;
+
+    function registrar(){
+        ax_1 = iptQtdCavalos.value;
+
+        if((ax_1 == 0 || ax_1 < 0 || ax_1.legth <= 0 || ax_1 > 7||ax_1 < 3 || Number.isNaN(ax_1))){
+            alert('Ih deu ruim')
+        }else{
+        
+        console.log(ax_1)
+        var display = document.getElementById('form1').style.display ='none'
+        var display = document.getElementById('form2').style.display ='flex'
+        var display = document.getElementById('cavalos').style.display ='flex'
+        escrita.innerHTML = `Qual os nomes dos ${ax_1} cavalos?`
+    }
+    }
+    var vtNomeCavalos=[]
+    var contador = 0;
+    function registrarr(){
+        
+        let nome = iptNomeCavalos.value;
+        console.log(vtNomeCavalos)
+        console.log(ax_1)
+        for (let index = 0; index < vtNomeCavalos.length; index++) {
+            if(nome == vtNomeCavalos[index]){
+                ('nome repetido')
+            }
+            
+        else if(nome == 0 || nome < 0 ||nome.lenght <= 0 || vtNomeCavalos.length >= ax_1){
+            alert('Ih deu ruim')}
+
+        else {
+            contador++
+        if(contador == 1){
+            var display = document.getElementById('cavalo1').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome1.innerHTML= `${vtNomeCavalos[0]}`
+        }
+        if(contador == 2){
+            console.log('entrou carai')
+            var display = document.getElementById('cavalo2').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome2.innerHTML= `${vtNomeCavalos[1]}`
+        }
+        if(contador == 3){
+            var display = document.getElementById('cavalo3').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome3.innerHTML= `${vtNomeCavalos[2]}`
+        }
+        if(contador == 4){
+            var display = document.getElementById('cavalo4').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome4.innerHTML= `${vtNomeCavalos[3]}`
+        }
+        if(contador == 5){
+            var display = document.getElementById('cavalo5').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome5.innerHTML= `${vtNomeCavalos[4]}`
+        }
+        if(contador == 6){
+            var display = document.getElementById('cavalo6').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome6.innerHTML= `${vtNomeCavalos[5]}`
+        }
+        if(contador == 7){
+            var display = document.getElementById('cavalo7').style.display ='flex'
+            vtNomeCavalos.push(iptNomeCavalos.value)
+            nome7.innerHTML= `${vtNomeCavalos[6]}`
+            
+        }
+        if(contador == ax_1 ){
+            contador = 999
+        }
+        
+        iptNomeCavalos.value = ``
+    }
+}
+}
+    function proximo(){
+        
+        if(contador == 999){
+        contador++}
+
+        if(contador == 1000){
+            var display = document.getElementById('inicio').style.display ='none'
+            var display = document.getElementById('form3').style.display ='flex'
+        
+        }
+        
+    }
+    var vtQtdVoltas = []
+    var ttVolta = 0;
+    function voltas(){
+       
+        let voltas = iptQtdVoltas.value;
+        if (voltas == 0 || voltas < 0 || voltas.length <= 0 || voltas > 12) {
+            alert(`opa, deu ruim`)
+        }   else {
+            ttVolta = iptQtdVoltas.value;
+            
+        }
+        console.log(vtQtdVoltas)
+       
+        
+        var display = document.getElementById('form3').style.display ='none'
+        var display = document.getElementById('form33').style.display ='flex'
+        var display = document.getElementById('form4').style.display ='flex'
+
+    }
+    voltasCont = 0;
+
+    function iniciar(){
+        
+
+        for (var index1 = 0; index1 < ttVolta; index1++) {
+            voltasCont ++;
+            voltaContador.innerHTML = `Volta ${voltasCont+1}`  
+            
+            for (let index = 0; index < ax_1; index++) {
+              
+                if (index == 0) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t1 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[0]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t1.toFixed(2)}<br>` 
+                } 
+                if (index == 1) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t2 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[1]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t2.toFixed(2)}<br>`
+                }
+                if (index == 2) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t3 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[2]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t3.toFixed(2)}<br>` 
+                }
+                if (index == 3) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t4 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[3]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t4.toFixed(2)}<br>`
+                }
+                if (index == 4) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t5 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[4]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t5.toFixed(2)}<br>` 
+                }
+                if (index == 5) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t6 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[5]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t6.toFixed(2)}<br>` 
+                }
+                if (index == 6) {
+                    let tRandom = Number((Math.random()*2)+7);
+                    t7 += tRandom;
+                    mostrar.innerHTML += `${vtNomeCavalos[6]} ${voltasCont}ª Volta - ${tRandom.toFixed(2)} - ${t7.toFixed(2)}<br>` 
+                }
+                
+            }
+            if (index1 >= 0) {
+                break
+            }
+            
+        }
+        if (voltasCont == ttVolta) {
+            vencedor();
+            var display = document.getElementById('corrida').style.display='none';
+            var display = document.getElementById('vencedor').style.display ='flex';
+        }
+        
+    }
+
+    vtEncontrarVencedor = [];
+    primeiro = 2000;
+    segundo = 2000;
+    terceiro = 2000 ;
+var vencedorr = 0;
+var segundoo = 0;
+var terceiroo = 0;
+    function vencedor() {
+
+        // var display = document.getElementById('resultado').style.display ='flex';
+        vtEncontrarVencedor.push(t1,t2,t3,t4,t5,t6,t7);
+        var numero = 0;
+        for (let index = 0; index < vtEncontrarVencedor.length; index++) {
+                if (vtEncontrarVencedor[index] > 0) {
+                    if (vtEncontrarVencedor[index] < primeiro) {
+                        primeiro = vtEncontrarVencedor[index];
+
+                        let numero = index;
+                        
+                        console.log(primeiro)
+                    
+                       vencedorr = vtNomeCavalos[numero] 
+                       divPrimeiro.innerHTML = `${vencedorr}`
+}
+                    }  
+    
+               
+        }
+        for (let index = 0; index < vtEncontrarVencedor.length; index++) {
+            if (vtEncontrarVencedor[index] > 0) {
+                if (vtEncontrarVencedor[index]> primeiro && vtEncontrarVencedor[index] < segundo) {
+                        segundo = vtEncontrarVencedor[index];
+                        console.log(segundo)
+                    let numero = index;
+                        segundoo = vtNomeCavalos[numero] 
+                        divSegundo.innerHTML = `${segundoo}`
+                    } 
+            }
+            
+        }
+        for (let index = 0; index < vtEncontrarVencedor.length; index++) {
+            if (vtEncontrarVencedor[index] > 0) {
+                if (vtEncontrarVencedor[index] > segundo && vtEncontrarVencedor[index] < terceiro) {
+                        terceiro = vtEncontrarVencedor[index]
+                        console.log(terceiro)
+
+                        let numero = index;
+                        terceiroo = vtNomeCavalos[numero] 
+                        divTerceiro.innerHTML = `${terceiroo}`
+                    }
+            }
+            
+        }
+        
+        
+        
+    }
+</script>
+</html>
